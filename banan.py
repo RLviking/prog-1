@@ -2,6 +2,7 @@ name = input("Välkomen till quizen om Sagan om Ringen, Vad heter du? ").capital
 print ("Användare", name)
 points = 3
 score = 0
+#fråga 1
 while True:
     print ("Fråga 1")
     print ("A, ringen övergav Gollum.")
@@ -35,7 +36,7 @@ while True:
 while True:
     print("fråga 3")
     print("A, 4")
-    print("B, 1")
+    print("B, 1" )
     print("C, 3")
     print("D, 1/2")
     svar3 = input("Merry frågar pippin hur många lembas bröd han åt. Hur många Lembas bröd åt pippin? ").capitalize()
