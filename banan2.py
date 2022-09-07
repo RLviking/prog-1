@@ -37,8 +37,10 @@ app.run()
 """""
 from re import A
 from tkinter import Scale
+from typing import Literal
 from  ursina import *
 import time
+
 
 app = Ursina()
 me = Animation(
@@ -50,14 +52,14 @@ camera.orthographic = True
 camera.fov = 20
 me = Entity(
     model='cube',
-    texture='plane.jpg',
+    texture='unicorn',
     scale=1.5,
     collider = "box"
 )
 # hinder
 fly = Entity(
     model='cube',
-    texture='assets\\fly1',
+    texture= 'anka',
     collider='box',
     scale=1.5,
     x=20,
@@ -105,7 +107,7 @@ def input(key):
             y=me.y,
             x=me.x+2,
             model='cube',
-            texture='assets\Bullet',
+            texture='banan',
             collider='cube'
         )
         e.animate_x(
