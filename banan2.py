@@ -40,8 +40,9 @@ from tkinter import Scale
 from typing import Literal
 from  ursina import *
 import time
-
-
+score=0
+points=1
+speed=4
 app = Ursina()
 me = Animation(
     'assets\player',
@@ -77,8 +78,10 @@ def newfly():
 
 
 def update(): # inte del av hinder 
+    global score, speed
+
     for fly in flies:
-        fly.x -= 4*time.dt # hinder slutar
+        fly.x -= speed*time.dt # hinder slutar
     me.y += held_keys['up arrow']*6*time.dt
     me.y -= held_keys['down arrow']*6*time.dt
     a = held_keys['up arrow']*-10
@@ -99,6 +102,11 @@ def update(): # inte del av hinder
             print("Hit")
             flies.remove(fly)
             destroy(fly)
+            score +=points
+            print(score)
+            if score % 20 == 0:
+                speed *= 1.4 
+            
 
 
 def input(key):
@@ -121,3 +129,6 @@ def input(key):
 newfly()
 EditorCamera()
 app.run() 
+  
+
+  
