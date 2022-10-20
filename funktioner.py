@@ -35,7 +35,7 @@ def maximum(a, b, c):
          return c
     # TODO Returnera det största av a,b,c
     # Ex: 3, 6, 12 in - 12 ut
-    pass
+    
 maximum(4, 9, 2)
 
 
