@@ -100,4 +100,3 @@ newfly()
 EditorCamera()
 app.run() 
   
-
