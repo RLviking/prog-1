@@ -100,6 +100,7 @@ while True:
 
     #handens värde räknas ut och jämförs med motståndaren och avgör vem som är vinnaren
     elif menyval == "3":
+        kastade_kort.clear()# tömmer kastade kort högen mellan varje runda 
         summa1 = värden(spelare["spelare1"])
         print(summa1)
         summa2 = värden(spelare["spelare2"])
